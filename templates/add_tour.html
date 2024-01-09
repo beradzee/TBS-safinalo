@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+პროდუქტის დამატება
+{% endblock %}
+
+
+
+
+<!-- tours -->
+
+{% block tours %}
+
+<div class="t-bg-color p-3">
+    {% if form.errors %}
+    {% for field, errors in form.errors.items() %}
+    {% for error in errors %}
+    <div class="alert alert-danger">
+        {{ error }}
+    </div>
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.city(class="form-control mt-4", placeholder=form.city.label.text) }}
+        {{ form.country(class="form-control mt-4", placeholder=form.country.label.text) }}
+        {{ form.price(class="form-control mt-4", placeholder=form.price.label.text) }}
+
+        {{ form.img(class="form-control mt-4", placeholder=form.img.label.text, accept=".jpg, .png, .jpeg") }}
+
+
+        {{ form.submit(class="btn btn-warning my-4") }}
+
+
+
+    </form>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+{% block margin %}
+<div class="margin-top"></div>
+{% endblock %}

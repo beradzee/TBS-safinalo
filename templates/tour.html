@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{tours.city}}, {{tours.country}}
+{% endblock %}
+
+
+
+<!-- container -->
+{% block tours %}
+
+<div class="tour-tour-container p-3 t-bg-color">
+  <div class="display-flex h-100 t-container">
+    <div class="t-left-block">
+      <div class="t-img-container ">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/static/{{ tours.img }}" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="t-info p-3">
+        <div class="t-location display-flex mb-3">
+          <span>
+            <img src="../static/location-grene.svg" alt="">
+          </span>
+          <div class="ms-3">
+            <span class="t-s-title">მდებარეობა</span>
+            <div class="c-c d-flex">
+              <p>{{ tours["country"]}}, {{ tours["city"]}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="t-date display-flex mb-3">
+          <span>
+            <img src="../static/green-calendar.svg" alt="">
+          </span>
+          <div class="ms-3">
+            <span class="t-s-title">ტურის გამართვის თრიღი</span>
+            <div class="c-c d-flex">
+              <div>
+                <span>გასვლა</span>
+                <p>04/02/24</p>
+              </div>
+              <div class="ms-2">
+                <span>დაბრუნება</span>
+                <p>07/02/24</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="align-itmes-center display-flex">
+          <span>
+            <img src="../static/newphone.svg" alt="">
+          </span>
+          <div class="display-flex align-itmes-center">
+            <span class="t-s-title ms-3 me-3">ტელეფონის ნომერი</span>
+            <div>
+              <button type="button" class="btn btn-outline-success"> <span class="me-2"><img
+                    src="../static/newphone.svg" alt=""></span>557 29 15 51</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="t-right-block">
+      <div class="t-description p-3">
+        <span class="t-s-title mb-4">დამატებითი ინფორნაცია</span>
+        <div class="t-description-info">
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/changali.svg" alt="">
+            </div>
+            <p class="fontistvis">კვება</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/manqana.svg" alt="">
+            </div>
+            <p class="fontistvis">ტრანსპორტი</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/gidi.svg" alt="">
+            </div>
+            <p class="fontistvis">გიდის მომსახურეობა</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/bargi.svg" alt="">
+            </div>
+            <p class="fontistvis">დამატებითი ბარგი</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/aviabiletebi.svg" alt="">
+            </div>
+            <p class="fontistvis">ავიაბილეთები</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/dazgveva.svg" alt="">
+            </div>
+            <p class="fontistvis">სამოგზაურო დაზღვევა</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/xelbargi.svg" alt="">
+            </div>
+            <p class="fontistvis">ხელბარგი</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/sastumro.svg" alt="">
+            </div>
+            <p class="fontistvis">სასტუმრო</p>
+          </div>
+          <div class="display-flex">
+            <div class="t-description-info-s me-3">
+              <img src="../static/muzeumi.svg" alt="">
+            </div>
+            <p class="fontistvis">მუზეუმის ბილეთები</p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="ms-3 display-flex justify-content-space-between align-itmes-center mt-5">
+        <div>
+          <h6>ფასი 1 კაცზე</h6>
+          <span class="t-t-price"><img src="../static/lari.svg" alt="">{{ tours["price"]}}</span>
+        </div>
+        <div class="d-flex">
+          <div class="me-2 b-f-size">
+          <button class="btn btn-warning t-button" type="button"> კალათაში</button>
+        </div>
+        
+        <div class="me-3 b-f-size">
+          <button class="btn btn-success t-button" type="button"> დაჯავშნა</button>
+        </div>
+        </div>
+        
+        
+      </div>
+
+
+
+
+      <div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+</div>
+
+
+{% endblock %}

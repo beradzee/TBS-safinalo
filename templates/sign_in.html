@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+    შესვლა
+{% endblock %}
+
+
+{% block tours %}
+    
+
+<div class="display-flex justify-content-center">
+    <div class="t-bg-color p-3 w-25">
+        {% if form.errors %}
+        {% for field, errors in form.errors.items() %}
+        {% for error in errors %}
+        <div class="alert alert-danger">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endfor %}
+        {% endif %}
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-danger">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+            
+        {% endif %}
+        {% endwith %}
+
+
+
+
+
+        <form method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            {{ form.username(class="form-control mt-4", placeholder=form.username.label.text) }}
+            {{ form.password(class="form-control mt-4", placeholder=form.password.label.text) }}
+            {{ form.submit(class="form-control btn btn-success my-4") }}
+
+            <div class="d-flex justify-content-center align-itmes-center">
+                <p class="">ჯერ არ ხარ დარეგისტრირებული? <a href="/reg" class="a-s">დარეგისტრირდი აქ</a></p>  
+            </div>
+            
+
+
+
+        </form>
+
+
+
+
+    </div>
+</div>
+
+    
+
+{% endblock %}
+
+    {% block margin %}
+    <div class="margin-top"></div>
+    {% endblock %}

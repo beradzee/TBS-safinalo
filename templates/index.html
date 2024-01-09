@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+
+
+
+{% block add %}
+<div class="title-container">
+  <h1 class="title-text">ყველა ტური ერთ სივრცეში</h1>
+</div>
+{% endblock %}
+
+
+<!-- tours -->
+
+{% block tours %}
+
+
+<div class="row">
+  {% for tour in tours %}
+  <div class="col">
+    <div class="card py-3 px-1 mb-5 rounded border-0">
+      <div class="display-flex justify-content-center">
+        <div class="tour-container relative-div">
+          {% if current_user.role == "admin" %}
+          <div class="absolute-div">
+          <a href="/edit_tour/{{tour.id}}">
+            <div class="edit_icon_div d-flex justify-content-center align-itmes-center mb-1">
+              <img class="edit_icon" src="../static/edit_icon.png" alt="">
+            </div>
+          </a>
+          <a href="/delete_tour/{{tour.id}}">
+            <div class="x_icon_div d-flex justify-content-center align-itmes-center">
+              <img class="edit_icon" src="../static/X_icon.png" alt="">
+            </div>
+          </a>
+          </div>
+          {% endif %}
+           
+          <a class="text-decoration-none" href="/tour/{{ tour.id }}">
+            <div class="img-container">
+              <img src="/static/{{ tour.img }}" class="image-div" alt="">
+            </div>
+            <div class="description">
+              <div class="ci-pr">
+                <div class="city-div">
+                  <h5 class="city">{{ tour.city }}</h5>
+                </div>
+                <div class="price-div">
+                  <h5 class="price">{{ tour.price }}<sup>₾</sup></h5>
+                </div>
+              </div>
+              <div class="country-div">
+                <p class="country">{{ tour.country }}<img class="ms-1" src="../static/map-pin.svg" alt=""></p>
+              </div>
+              
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  
+
+
+</div>
+{% endblock %}
+
+
+
+
+
+<!-- <a href="/delete_tour/{{tour.id}}">
+                <button class="btn btn-danger my-4">წაშლა</button>
+            </a> -->
+

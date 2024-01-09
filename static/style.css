@@ -1,0 +1,290 @@
+/* sabaziso */
+
+* {
+    box-sizing: border-box;
+}
+.a-s{
+    text-decoration: none;
+}
+.display-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-space-between {
+    justify-content: space-between;
+}
+.margin-top {
+    margin-top: 130px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+.align-itmes-center {
+    align-items: center;
+}
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+.title-container {
+    margin: 0 auto;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+
+}
+.z-index-0 {
+    z-index: 1;
+}
+.tbs-icon {
+    width: 50px;
+}
+
+
+
+
+/* index.html */
+.title-text {
+    font-size: 250%;
+    margin-bottom: 50px;
+}
+
+.tour-container {
+    width: 550px;
+    height: 360px;    
+
+}
+.img-container {
+
+    width: 100%;
+    height: 75%;
+}
+.description {
+    width: 100%;
+    height: 25%;
+    padding-bottom: 100px;
+}
+.ci-pr {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.image-div {
+    width: 100%;
+    height: 100%;
+}
+.city {
+    color: green;
+    font-size: 25px;
+} 
+.price {
+    
+    color: green;
+    font-size: 30px;
+    margin-right: 20px;
+    
+} 
+.country {
+    margin-bottom: 20px;
+    width: 90%;
+    margin: 0 auto;
+    color: blue;
+} 
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    background: rgb(237, 236, 236);
+    height: 130px;
+
+}
+.hara {
+    height: 100%;
+    justify-content: space-between;
+}
+
+.f-right-block {
+    
+    width: 47%;
+    height: 100%;
+
+}
+
+.f-line {
+    height: 100%;
+    width: 1px;
+    background-color: black;
+}
+.f-left-block {
+    
+    width: 47%;
+    height: 100%;
+
+}
+    
+
+
+.icons {
+    width: 35px;
+    height: 35px;
+}
+.tibisi {
+    width: 220px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tour.html */
+.t-bg-color {
+    background-color: rgb(246, 246, 246);
+}
+.tour-tour-container {
+    
+    width: 100%;
+    height: 650px;
+    margin-bottom: 100px;
+}
+.t-container {
+    justify-content: space-between;
+}
+
+.t-left-block {
+    width: 50%;
+    height: 100%;
+    
+}
+.t-img-container {
+    width: 100%;
+    height: 60%;
+}
+.t-image-div {
+    width: 100%;
+    height: 100%;
+}
+.t-right-block {
+    width: 48%;
+    height: 100%;
+    
+}
+.t-info {
+    width: 100%;
+}
+
+
+.c-c p {
+    margin: 0;
+}
+
+.t-s-title {
+    font-size: 16px;
+    color: #455A64;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.t-description span {
+    font-size: 25px;
+}
+
+
+.t-t-price {
+    font-size: 40px;
+}
+
+.t-button {
+    width: 140px;
+    height: 60px;
+    font-size: 50px;
+}
+.b-f-size {
+    font-size: 40px;
+}
+
+
+.relative-div {
+    position: relative;
+}
+.absolute-div {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    
+}
+
+.edit_icon_div {
+    width: 30px;
+    height: 30px;
+    
+    
+    color: red;
+    background-color: white;
+    border-radius: 3px;
+    border: 2px rgb(189, 188, 188) solid;
+}
+
+.edit_icon{
+    width: 20px;
+    height: 20px;
+}
+
+.x_icon_div {
+    width: 30px;
+    height: 30px;
+    
+    
+    color: red;
+    background-color: white;
+    border-radius: 3px;
+    border: 2px rgb(189, 188, 188) solid;
+}
+
+
+
+
+
+
+
+
+/* ხელი არ დაედოს */
+.carousel {
+    height: 100%; /* რა სიმაღლეც გინდა აქ დააყენე, თუნდაც პროცენტებში */
+    width: 100%;
+  }
+  
+.carousel-inner, .carousel-item {
+    height: 100% ;
+}
+  
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+/* ჰაა მეთქიიი */
